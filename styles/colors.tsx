@@ -3,4 +3,4 @@ export const primary_Colors = [
     '#f8f1e9', // header colors
     '#990100', // red color for expenses
     '#4f8e26', // green color for income
-]   
+]  
