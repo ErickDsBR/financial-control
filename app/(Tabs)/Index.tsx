@@ -8,7 +8,7 @@ export default function Home() {
       <View style={styles.header}>
         <Text style={styles.headerText}>Financial Control</Text>
       </View>
-      
+
     </View>
   );
 }
