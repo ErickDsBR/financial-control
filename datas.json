@@ -1,0 +1,23 @@
+{
+        "id": 1,
+        "name": "Erick",
+        "salary": 5000,
+        "expenses":  [
+                {
+                        "id": 1,
+                        "name": "Aluguel",
+                        "amount": 1500
+                },
+                {
+                        "id": 2,
+                        "name": "Supermercado",
+                        "amount": 800   
+
+                } 
+
+        ]
+}       
+        
+
+        
+
