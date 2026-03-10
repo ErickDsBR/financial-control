@@ -1,4 +1,4 @@
-import { Text, View } from 'react-native';
+import { ScrollView, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from '../../styles/styles';
 
@@ -21,10 +21,31 @@ export default function Home() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.welcome }>Welcome, {infos.name}!</Text>
-        <Text style={styles.salaryText}> Salary: ${infos.salary.toFixed(2)}</Text>
-      </View>
+      <ScrollView style={{ width: '100%' }}
+        horizontal={true}
+        snapToAlignment='center'
+        snapToInterval={400}
+        decelerationRate="fast"
+        showsHorizontalScrollIndicator={false}
+        disableIntervalMomentum={true}
+      >
+
+        <View style={styles.header}>
+          <Text style={styles.welcome}>Welcome, {infos.name}!</Text>
+          <Text style={styles.salaryText}> Salary: ${infos.salary.toFixed(2)}</Text>
+
+        </View>
+        <View style={styles.header}>
+          <Text style={styles.salaryText}> Expenses: ${infos.expenses.reduce((sum, expense) => sum + expense.amount, 0).toFixed(2)}
+          </Text>
+
+        </View>
+
+        <View style={styles.header}>
+          <Text style={styles.salaryText}> Expenses: ${infos.expenses.reduce((sum, expense) => sum + expense.amount, 0).toFixed(2)}</Text>
+
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
