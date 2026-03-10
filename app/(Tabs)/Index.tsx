@@ -21,7 +21,7 @@ export default function Home() {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView style={{ width: '100%' }}
+      <ScrollView style={{ flexDirection: 'row' }}
         horizontal={true}
         snapToAlignment='center'
         snapToInterval={400}
@@ -42,7 +42,7 @@ export default function Home() {
         </View>
 
         <View style={styles.header}>
-          <Text style={styles.salaryText}> Expenses: ${infos.expenses.reduce((sum, expense) => sum + expense.amount, 0).toFixed(2)}</Text>
+
 
         </View>
       </ScrollView>
